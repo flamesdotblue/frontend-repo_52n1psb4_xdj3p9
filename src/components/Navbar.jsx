@@ -8,7 +8,7 @@ export default function Navbar() {
           <span className="inline-grid h-9 w-9 place-items-center rounded-2xl bg-gray-900 text-white shadow-sm">
             <Heart className="h-5 w-5" />
           </span>
-          <span className="text-lg font-semibold tracking-tight">Twin Vibes</span>
+          <span className="text-base sm:text-lg font-semibold tracking-tight">Twin Vibes</span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8 text-sm text-gray-600">
@@ -17,8 +17,8 @@ export default function Navbar() {
           <a href="#features" className="hover:text-gray-900">Features</a>
         </nav>
 
-        <div className="flex items-center gap-3">
-          <button className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900">Log in</button>
+        <div className="flex items-center gap-2">
+          <button className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900">Log in</button>
           <button className="px-4 py-2 text-sm font-medium rounded-full bg-gray-900 text-white hover:bg-black">Get the app</button>
         </div>
       </div>
