@@ -28,19 +28,19 @@ export default function ProfileShowcase() {
   return (
     <section id="profiles" className="py-16 sm:py-24 bg-gradient-to-b from-white to-gray-50/60">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-end justify-between mb-8">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Explore nearby vibes</h2>
-            <p className="mt-2 text-gray-600">Swipe through clean, elegant profile cards designed for focus.</p>
+            <h2 className="text-3xl font-semibold tracking-tight">A clean, swipe-first flow</h2>
+            <p className="mt-2 text-gray-600">Minimal UI with clear actions that stay out of the way.</p>
           </div>
           <div className="hidden sm:flex items-center gap-2 text-xs text-gray-500">
-            <div className="h-2 w-2 rounded-full bg-fuchsia-500" /> Live now
+            <span className="h-2 w-2 rounded-full bg-gray-900" /> Smooth, simple, fast
           </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {profiles.map((p) => (
-            <div key={p.name} className="group relative rounded-3xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-shadow">
+            <div key={p.name} className="group relative rounded-[28px] overflow-hidden bg-white border border-gray-200 shadow-[0_20px_60px_-25px_rgba(0,0,0,0.2)]">
               <div className="aspect-[3/4]">
                 <img src={p.img} alt={p.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>
@@ -54,11 +54,11 @@ export default function ProfileShowcase() {
                     <button className="h-10 w-10 grid place-items-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors" aria-label="Pass">
                       <X className="h-5 w-5 text-gray-700" />
                     </button>
-                    <button className="h-10 w-10 grid place-items-center rounded-full bg-fuchsia-500 hover:bg-fuchsia-600 transition-colors text-white shadow-lg shadow-fuchsia-500/30" aria-label="Like">
+                    <button className="h-10 w-10 grid place-items-center rounded-full bg-gray-900 hover:bg-black text-white transition-colors" aria-label="Like">
                       <Heart className="h-5 w-5" />
                     </button>
-                    <button className="h-10 w-10 grid place-items-center rounded-full bg-gray-900 hover:bg-gray-800 transition-colors text-white" aria-label="Message">
-                      <MessageCircle className="h-5 w-5" />
+                    <button className="h-10 w-10 grid place-items-center rounded-full bg-white border border-gray-200 hover:border-gray-300 transition-colors" aria-label="Message">
+                      <MessageCircle className="h-5 w-5 text-gray-900" />
                     </button>
                   </div>
                 </div>

@@ -3,38 +3,37 @@ import { Sparkles } from 'lucide-react'
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0 -z-0">
-        <div className="absolute -top-32 -left-24 h-80 w-80 rounded-full bg-fuchsia-400/20 blur-3xl" />
-        <div className="absolute -bottom-24 -right-16 h-80 w-80 rounded-full bg-sky-400/20 blur-3xl" />
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/70 to-white pointer-events-none" />
+      {/* Background aura */}
+      <div className="absolute inset-0">
+        <div className="pointer-events-none absolute -top-24 -left-24 h-80 w-80 rounded-full bg-gradient-to-br from-gray-900/10 to-gray-900/0 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-gradient-to-tr from-gray-900/10 to-gray-900/0 blur-3xl" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white via-white/70 to-white" />
       </div>
 
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Copy */}
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-3 py-1 text-xs text-gray-600 shadow-sm">
-              <Sparkles className="h-3.5 w-3.5 text-fuchsia-500" />
-              Smart matching, real connections
-            </div>
-            <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-tight">
-              Meet your person, not just a profile
+            <span className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-3 py-1 text-xs text-gray-700 shadow-sm">
+              <Sparkles className="h-3.5 w-3.5" />
+              Dating, done simply
+            </span>
+            <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
+              A calmer way to meet people you actually vibe with
             </h1>
             <p className="mt-5 text-gray-600 text-base sm:text-lg max-w-xl">
-              A modern dating experience that feels effortless. Clean, calm, and focused on what matters: authentic conversations and meaningful vibes.
+              Clean design. Honest profiles. Thoughtful matching. Less noise, more real connection.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#profiles" className="px-5 py-3 rounded-xl bg-gray-900 text-white font-medium shadow-lg shadow-gray-900/20 hover:bg-gray-800">
-                Start exploring
-              </a>
-              <a href="#features" className="px-5 py-3 rounded-xl bg-white text-gray-900 font-medium border border-gray-200 hover:border-gray-300">
-                See how it works
-              </a>
+              <a href="#profiles" className="px-5 py-3 rounded-full bg-gray-900 text-white font-medium hover:bg-black">Start exploring</a>
+              <a href="#features" className="px-5 py-3 rounded-full bg-white text-gray-900 font-medium border border-gray-200 hover:border-gray-300">See features</a>
             </div>
-            <div className="mt-8 text-xs text-gray-500">No spam. Be yourself. Leave anytime.</div>
+            <div className="mt-6 text-xs text-gray-500">No ads. No pressure. Be yourself.</div>
           </div>
 
-          <div className="relative h-[420px] sm:h-[520px]">
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-fuchsia-100 via-white to-sky-100 border border-white/60 shadow-2xl shadow-fuchsia-500/10" />
+          {/* Visual stack */}
+          <div className="relative h-[460px] sm:h-[540px]">
+            <div className="absolute inset-0 rounded-[32px] bg-white border border-gray-100 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.15)]" />
             <div className="absolute inset-0 p-4 sm:p-6 grid grid-cols-3 gap-3">
               <div className="space-y-3">
                 <ProfileCard name="Maya" age={26} city="Lisbon" img="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop" vibe="Art & rooftop sunsets" />
